@@ -9,7 +9,7 @@ export enum SupportedChainId {
   RINKEBY = 4,
   GOERLI = 5,
   KOVAN = 42,
-
+  UZH_POS = 710,
   ARBITRUM_ONE = 42161,
   ARBITRUM_RINKEBY = 421611,
   OPTIMISM = 10,
@@ -22,7 +22,7 @@ export const ALL_SUPPORTED_CHAIN_IDS: SupportedChainId[] = [
   SupportedChainId.RINKEBY,
   SupportedChainId.GOERLI,
   SupportedChainId.KOVAN,
-
+  SupportedChainId.UZH_POS,
   SupportedChainId.ARBITRUM_ONE,
   SupportedChainId.ARBITRUM_RINKEBY,
   SupportedChainId.OPTIMISM,
@@ -35,6 +35,7 @@ export const L1_CHAIN_IDS = [
   SupportedChainId.RINKEBY,
   SupportedChainId.GOERLI,
   SupportedChainId.KOVAN,
+  SupportedChainId.UZH_POS,
 ] as const
 
 export type SupportedL1ChainId = typeof L1_CHAIN_IDS[number]
@@ -74,6 +75,13 @@ export type ChainInfo = { readonly [chainId: number]: L1ChainInfo | L2ChainInfo 
   { readonly [chainId in SupportedL1ChainId]: L1ChainInfo }
 
 export const CHAIN_INFO: ChainInfo = {
+  [SupportedChainId.UZH_POS]: {
+    docs: 'https://docs.uniswap.org/',
+    explorer: 'http://130.60.24.234:4000/',
+    infoLink: 'https://uzh.ch',
+    label: 'UZH',
+    nativeCurrency: { name: 'UZH ETH', symbol: 'UZHETHp', decimals: 18 },
+  },
   [SupportedChainId.ARBITRUM_ONE]: {
     blockWaitMsBeforeWarning: ms`10m`,
     bridge: 'https://bridge.arbitrum.io/',

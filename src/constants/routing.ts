@@ -75,6 +75,10 @@ export const CUSTOM_BASES: { [chainId: number]: { [tokenAddress: string]: Token[
  * Shows up in the currency select for swap and add liquidity
  */
 export const COMMON_BASES: ChainCurrencyList = {
+  [SupportedChainId.UZH_POS]: [
+    ExtendedEther.onChain(SupportedChainId.UZH_POS),
+    WETH9_EXTENDED[SupportedChainId.UZH_POS],
+  ],
   [SupportedChainId.MAINNET]: [
     ExtendedEther.onChain(SupportedChainId.MAINNET),
     DAI,

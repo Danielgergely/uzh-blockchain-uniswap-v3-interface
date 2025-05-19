@@ -240,6 +240,7 @@ export default function NetworkSelector() {
             <Trans>Select a network</Trans>
           </FlyoutHeader>
           <Row targetChain={SupportedChainId.MAINNET} />
+          <Row targetChain={SupportedChainId.UZH_POS} />
           <Row targetChain={SupportedChainId.OPTIMISM} />
           <Row targetChain={SupportedChainId.ARBITRUM_ONE} />
         </FlyoutMenu>

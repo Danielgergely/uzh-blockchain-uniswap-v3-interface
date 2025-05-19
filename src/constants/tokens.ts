@@ -136,6 +136,21 @@ export const ETH2X_FLI = new Token(
   'ETH2x-FLI',
   'ETH 2x Flexible Leverage Index'
 )
+export const TOKEN5 = new Token(
+  SupportedChainId.UZH_POS,
+  '0xcae9735E9F776fdBE3cdE84e9bD32356A7b8cC56',
+  18,
+  'Token5',
+  'Token5'
+)
+export const TOKEN6 = new Token(
+  SupportedChainId.UZH_POS,
+  '0x7869C0d8096A048f939f7C9207114F7d2E38F34A',
+  18,
+  'Token6',
+  'Token6'
+)
+
 export const UNI: { [chainId: number]: Token } = {
   [SupportedChainId.MAINNET]: new Token(SupportedChainId.MAINNET, UNI_ADDRESS[1], 18, 'UNI', 'Uniswap'),
   [SupportedChainId.RINKEBY]: new Token(SupportedChainId.RINKEBY, UNI_ADDRESS[4], 18, 'UNI', 'Uniswap'),
@@ -146,6 +161,13 @@ export const UNI: { [chainId: number]: Token } = {
 
 export const WETH9_EXTENDED: { [chainId: number]: Token } = {
   ...WETH9,
+  [SupportedChainId.UZH_POS]: new Token(
+    SupportedChainId.UZH_POS,
+    '0x9B4E9fa1c38781D6ec089A897Cca225285a1f1Ac',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
   [SupportedChainId.OPTIMISM]: new Token(
     SupportedChainId.OPTIMISM,
     '0x4200000000000000000000000000000000000006',
