@@ -80,6 +80,7 @@ export const CHAIN_INFO: ChainInfo = {
     explorer: 'http://130.60.24.234:4000/',
     infoLink: 'https://uzh.ch',
     label: 'UZH',
+    logoUrl: 'https://uzh-uniswap-v3-contracts-768271.pages.uzh.ch/logos/uzh.svg',
     nativeCurrency: { name: 'UZH ETH', symbol: 'UZHETHp', decimals: 18 },
   },
   [SupportedChainId.ARBITRUM_ONE]: {

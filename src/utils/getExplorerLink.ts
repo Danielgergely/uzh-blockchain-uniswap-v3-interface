@@ -52,6 +52,20 @@ export function getExplorerLink(chainId: number, data: string, type: ExplorerDat
     }
   }
 
+  if (chainId === SupportedChainId.UZH_POS) {
+    switch (type) {
+      case ExplorerDataType.TRANSACTION:
+        return `http://130.60.24.234:4000/tx/${data}`
+      case ExplorerDataType.ADDRESS:
+      case ExplorerDataType.TOKEN:
+        return `http://130.60.24.234:4000/address/${data}`
+      case ExplorerDataType.BLOCK:
+        return `http://130.60.24.234:4000/block/${data}`
+      default:
+        return `http://130.60.24.234:4000/`
+    }
+  }
+
   const prefix = `https://${ETHERSCAN_PREFIXES[chainId] ?? ''}etherscan.io`
 
   switch (type) {
