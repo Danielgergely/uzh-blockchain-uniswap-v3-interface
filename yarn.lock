@@ -6456,7 +6456,7 @@ __metadata:
     d3: "npm:^7.0.0"
     dotenv-cli: "npm:^8.0.0"
     eslint: "npm:^7.11.0"
-    eslint-config-prettier: "npm:^6.11.0"
+    eslint-config-prettier: "npm:8.10.0"
     eslint-plugin-prettier: "npm:^3.1.3"
     eslint-plugin-react: "npm:^7.19.0"
     eslint-plugin-react-hooks: "npm:^4.0.0"
@@ -6476,7 +6476,7 @@ __metadata:
     node-vibrant: "npm:^3.2.1-alpha.1"
     polished: "npm:^3.3.2"
     polyfill-object.fromentries: "npm:^1.0.1"
-    prettier: "npm:^2.2.1"
+    prettier: "npm:2.8.8"
     qs: "npm:^6.9.4"
     react: "npm:^17.0.1"
     react-confetti: "npm:^6.0.0"
@@ -13132,16 +13132,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^6.11.0":
-  version: 6.15.0
-  resolution: "eslint-config-prettier@npm:6.15.0"
-  dependencies:
-    get-stdin: "npm:^6.0.0"
+"eslint-config-prettier@npm:8.10.0":
+  version: 8.10.0
+  resolution: "eslint-config-prettier@npm:8.10.0"
   peerDependencies:
-    eslint: ">=3.14.1"
+    eslint: ">=7.0.0"
   bin:
-    eslint-config-prettier-check: bin/cli.js
-  checksum: 10c0/28fff0bd0cda1af62645955f916f4d5bc6922d6ec6a7c8c9dd207d3aab7a241ca1feb1ec787acea09a95956c7e5080a6310ed391b0ff218055378e1af24e2ff9
+    eslint-config-prettier: bin/cli.js
+  checksum: 10c0/19f8c497d9bdc111a17a61b25ded97217be3755bbc4714477dfe535ed539dddcaf42ef5cf8bb97908b058260cf89a3d7c565cb0be31096cbcd39f4c2fa5fe43c
   languageName: node
   linkType: hard
 
@@ -15100,13 +15098,6 @@ __metadata:
   version: 0.1.0
   resolution: "get-package-type@npm:0.1.0"
   checksum: 10c0/e34cdf447fdf1902a1f6d5af737eaadf606d2ee3518287abde8910e04159368c268568174b2e71102b87b26c2020486f126bfca9c4fb1ceb986ff99b52ecd1be
-  languageName: node
-  linkType: hard
-
-"get-stdin@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "get-stdin@npm:6.0.0"
-  checksum: 10c0/c8971d27ffb72e4aae0f18ba792d2bfec872f662e98e13b182d8611a36f38396b79f43563884f597e667c7bb9ab98f337ee958ae278af5fa7c310ca62845e56b
   languageName: node
   linkType: hard
 
@@ -22645,12 +22636,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.1.2, prettier@npm:^2.2.1":
-  version: 2.3.2
-  resolution: "prettier@npm:2.3.2"
+"prettier@npm:^2.8.8":
+  version: 2.8.8
+  resolution: "prettier@npm:2.8.8"
   bin:
     prettier: bin-prettier.js
-  checksum: 10c0/40f159f05808966ff4c57e147651cf038adb7f5af3fbca8d999b87ccbaeff7d73cf9038a45f667a8c18cbb049c1a980a752fa8987dfd3dcdd66e932e366f40be
+  checksum: 10c0/463ea8f9a0946cd5b828d8cf27bd8b567345cf02f56562d5ecde198b91f47a76b7ac9eae0facd247ace70e927143af6135e8cf411986b8cb8478784a4d6d724a
   languageName: node
   linkType: hard
 
