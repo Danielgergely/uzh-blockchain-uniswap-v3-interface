@@ -1,5 +1,5 @@
-overrideExisting: true
-schema: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3'
+overwrite: true
+schema: 'https://gateway.thegraph.com/api/${GRAPH_API_KEY}/subgraphs/id/5zvR82QoaXYFyDEKLZ9t6v9adgnptxYpKpSbxtgVENFV'
 documents: 'src/**/!(*.d).{ts,tsx}'
 generates:
   ./src/state/data/generated.ts:

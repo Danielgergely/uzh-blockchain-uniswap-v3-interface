@@ -7,12 +7,16 @@ import { AppState } from 'state'
 
 // List of supported subgraphs. Note that the app currently only support one active subgraph at a time
 const CHAIN_SUBGRAPH_URL: Record<number, string> = {
-  [SupportedChainId.MAINNET]: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3',
-  [SupportedChainId.RINKEBY]: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3',
+  [SupportedChainId.MAINNET]:
+    'https://gateway.thegraph.com/api/subgraphs/id/5zvR82QoaXYFyDEKLZ9t6v9adgnptxYpKpSbxtgVENFV',
+  [SupportedChainId.RINKEBY]:
+    'https://gateway.thegraph.com/api/subgraphs/id/5zvR82QoaXYFyDEKLZ9t6v9adgnptxYpKpSbxtgVENFV',
 
-  [SupportedChainId.ARBITRUM_ONE]: 'https://api.thegraph.com/subgraphs/name/ianlapham/arbitrum-minimal',
+  [SupportedChainId.ARBITRUM_ONE]:
+    'https://gateway.thegraph.com/api/subgraphs/id/FbCGRftH4a3yZugY7TnbYgPJVEv2LvMT6oF1fxPe9aJM',
 
-  [SupportedChainId.OPTIMISM]: 'https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-optimism-dev',
+  [SupportedChainId.OPTIMISM]:
+    'https://gateway.thegraph.com/api/subgraphs/id/Cghf4LfVqPiFw6fp6Y5X5Ubc8UpmUhSfJL82zwiBFLaj',
 }
 
 export const api = createApi({
@@ -98,7 +102,13 @@ function graphqlRequestBaseQuery(): BaseQueryFn<
         }
       }
 
-      return { data: await new GraphQLClient(subgraphUrl).request(document, variables), meta: {} }
+      const client = new GraphQLClient(subgraphUrl, {
+        headers: {
+          Authorization: `Bearer ${process.env.GRAPH_API_KEY}`,
+        },
+      })
+
+      return { data: await client.request(document, variables), meta: {} }
     } catch (error) {
       if (error instanceof ClientError) {
         const { name, message, stack, request, response } = error
