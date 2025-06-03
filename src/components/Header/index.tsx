@@ -295,10 +295,17 @@ export default function Header() {
             <Trans>Vote</Trans>
           </StyledNavLink>
         )}
-        <StyledExternalLink id={`charts-nav-link`} href={infoLink}>
-          <Trans>Charts</Trans>
-          <sup>↗</sup>
-        </StyledExternalLink>
+        {(!chainId || chainId !== SupportedChainId.UZH_POS) && (
+          <StyledExternalLink id={`charts-nav-link`} href={infoLink}>
+            <Trans>Charts</Trans>
+            <sup>↗</sup>
+          </StyledExternalLink>
+        )}
+        {chainId === SupportedChainId.UZH_POS && (
+          <StyledNavLink id={`faucet-nav-link`} to={'/faucet'}>
+            <Trans>Faucet</Trans>
+          </StyledNavLink>
+        )}
       </HeaderLinks>
 
       <HeaderControls>

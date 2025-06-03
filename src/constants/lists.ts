@@ -1,4 +1,4 @@
-const UZH_LIST = 'https://uzh-uniswap-v3-contracts-768271.pages.uzh.ch/tokenList.json'
+export const UZH_LIST = 'https://uzh-uniswap-v3-contracts-768271.pages.uzh.ch/tokenList.json'
 
 export const UNSUPPORTED_LIST_URLS: string[] = []
 

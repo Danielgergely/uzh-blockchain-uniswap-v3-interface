@@ -5,6 +5,8 @@ import { constructSameAddressMap } from '../utils/constructSameAddressMap'
 import { SupportedChainId } from './chains'
 
 type AddressMap = { [chainId: number]: string }
+
+// hydrateWithUZHAddress takes an existing address map and adds an according address on the UZH_POS chain.
 const hydrateWithUZHAddress = (addressMap: AddressMap, address: string): AddressMap => {
   return {
     ...addressMap,
@@ -99,3 +101,6 @@ export const V3_MIGRATOR_ADDRESSES: AddressMap = constructSameAddressMap('0xA564
   SupportedChainId.ARBITRUM_ONE,
   SupportedChainId.ARBITRUM_RINKEBY,
 ])
+export const FAUCET_ADDRESSES: AddressMap = {
+  [SupportedChainId.UZH_POS]: '0x1FCd8f0466b60367dE4BF109e56BD4902B324199',
+}

@@ -12,6 +12,7 @@ import FortmaticIcon from '../../assets/images/fortmaticIcon.png'
 import PortisIcon from '../../assets/images/portisIcon.png'
 import WalletConnectIcon from '../../assets/images/walletConnectIcon.svg'
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../../connectors'
+import { SupportedChainId } from '../../constants/chains'
 import { NetworkContextName } from '../../constants/misc'
 import useENSName from '../../hooks/useENSName'
 import { useHasSocks } from '../../hooks/useSocksBalance'
@@ -165,7 +166,7 @@ function StatusIcon({ connector }: { connector: AbstractConnector }) {
 }
 
 function Web3StatusInner() {
-  const { account, connector, error } = useWeb3React()
+  const { account, connector, error, chainId } = useWeb3React()
 
   const { ENSName } = useENSName(account ?? undefined)
 
@@ -182,7 +183,7 @@ function Web3StatusInner() {
   const hasSocks = useHasSocks()
   const toggleWalletModal = useWalletModalToggle()
 
-  if (account) {
+  if (account && chainId === SupportedChainId.UZH_POS) {
     return (
       <Web3StatusConnected id="web3-status-connected" onClick={toggleWalletModal} pending={hasPendingTransactions}>
         {hasPendingTransactions ? (
@@ -206,6 +207,13 @@ function Web3StatusInner() {
       <Web3StatusError onClick={toggleWalletModal}>
         <NetworkIcon />
         <Text>{error instanceof UnsupportedChainIdError ? <Trans>Wrong Network</Trans> : <Trans>Error</Trans>}</Text>
+      </Web3StatusError>
+    )
+  } else if (chainId !== SupportedChainId.UZH_POS) {
+    return (
+      <Web3StatusError id="connect-wallet" onClick={toggleWalletModal}>
+        <NetworkIcon />
+        <Text>UZH_POS</Text>
       </Web3StatusError>
     )
   } else {
