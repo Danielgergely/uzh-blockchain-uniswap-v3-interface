@@ -9,13 +9,14 @@ import { abi as QuoterABI } from '@uniswap/v3-periphery/artifacts/contracts/lens
 import { abi as MulticallABI } from '@uniswap/v3-periphery/artifacts/contracts/lens/UniswapInterfaceMulticall.sol/UniswapInterfaceMulticall.json'
 import { abi as NFTPositionManagerABI } from '@uniswap/v3-periphery/artifacts/contracts/NonfungiblePositionManager.sol/NonfungiblePositionManager.json'
 import { abi as V2MigratorABI } from '@uniswap/v3-periphery/artifacts/contracts/V3Migrator.sol/V3Migrator.json'
+import FAUCET_ABI from '@uzh-uniswap-v3-contracts/faucet-artifacts'
+import { Faucet } from '@uzh-uniswap-v3-contracts/faucet-artifacts'
 import ARGENT_WALLET_DETECTOR_ABI from 'abis/argent-wallet-detector.json'
 import EIP_2612 from 'abis/eip_2612.json'
 import ENS_PUBLIC_RESOLVER_ABI from 'abis/ens-public-resolver.json'
 import ENS_ABI from 'abis/ens-registrar.json'
 import ERC20_ABI from 'abis/erc20.json'
 import ERC20_BYTES32_ABI from 'abis/erc20_bytes32.json'
-import FAUCET_ABI from 'abis/faucet.json'
 import GOVERNOR_BRAVO_ABI from 'abis/governor-bravo.json'
 import WETH_ABI from 'abis/weth.json'
 import {
@@ -37,7 +38,7 @@ import { NonfungiblePositionManager, Quoter, UniswapInterfaceMulticall } from 't
 import { V3Migrator } from 'types/v3/V3Migrator'
 import { getContract } from 'utils'
 
-import { ArgentWalletDetector, EnsPublicResolver, EnsRegistrar, Erc20, Faucet, Weth } from '../abis/types'
+import { ArgentWalletDetector, EnsPublicResolver, EnsRegistrar, Erc20, Weth } from '../abis/types'
 import { UNI, WETH9_EXTENDED } from '../constants/tokens'
 import { useActiveWeb3React } from './web3'
 
@@ -149,5 +150,5 @@ export function useV3Quoter() {
 }
 
 export function useFaucetContract(): Contract | null {
-  return useContract<Faucet>(FAUCET_ADDRESSES, FAUCET_ABI, true)
+  return useContract<Faucet>(FAUCET_ADDRESSES, FAUCET_ABI.abi, true)
 }
