@@ -6440,7 +6440,7 @@ __metadata:
     "@uniswap/v3-core": "npm:1.0.0"
     "@uniswap/v3-periphery": "npm:^1.1.1"
     "@uniswap/v3-sdk": "npm:^3.4.1"
-    "@uzh-uniswap-v3-contracts/faucet-artifacts": "npm:^1.0.3"
+    "@uzh-uniswap-v3-contracts/faucet-artifacts": "npm:^1.0.6"
     "@web3-react/core": "npm:^6.0.9"
     "@web3-react/fortmatic-connector": "npm:^6.0.9"
     "@web3-react/injected-connector": "npm:^6.0.7"
@@ -6635,10 +6635,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uzh-uniswap-v3-contracts/faucet-artifacts@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "@uzh-uniswap-v3-contracts/faucet-artifacts@npm:1.0.3::__archiveUrl=https%3A%2F%2Fgitlab.uzh.ch%2Fapi%2Fv4%2Fprojects%2F10580%2Fpackages%2Fnpm%2F%40uzh-uniswap-v3-contracts%2Ffaucet-artifacts%2F-%2F%40uzh-uniswap-v3-contracts%2Ffaucet-artifacts-1.0.3.tgz"
-  checksum: 10c0/45e216d8ec858fdfc59e7b101fb77104928f3303cb89b8df6c81f015e6f8d496a6c87bb5735097a9fe59b42df2978fccd9500e916cac6b9564bcc74c193acc65
+"@uzh-uniswap-v3-contracts/faucet-artifacts@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "@uzh-uniswap-v3-contracts/faucet-artifacts@npm:1.0.6::__archiveUrl=https%3A%2F%2Fgitlab.uzh.ch%2Fapi%2Fv4%2Fprojects%2F10580%2Fpackages%2Fnpm%2F%40uzh-uniswap-v3-contracts%2Ffaucet-artifacts%2F-%2F%40uzh-uniswap-v3-contracts%2Ffaucet-artifacts-1.0.6.tgz"
+  checksum: 10c0/d96fc11f18f28a24ffe8179bace1cc6e358cfd885fe4e859a2ff30363ca3e79056e82f7d700419fd4382d1bc1ba499ad12b9fd031b2b92ffc8ec52dc11c2e46a
   languageName: node
   linkType: hard
 
